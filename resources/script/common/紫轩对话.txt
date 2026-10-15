@@ -1,0 +1,12 @@
+  if getvar("Event") == 2006 then goto L_2006 end
+  goto __jx_script_return
+
+  ::L_2006::
+  say("紫轩：杨大哥，你还恨我吗？",16);
+  say("杨影枫：紫轩，我已经原谅你了，你就不要再自责了，好吗？",2);
+  say("紫轩：杨大哥，你还爱我吗？",16);
+  say("杨影枫：这个……紫轩……我……",7);
+  say("紫轩：杨大哥，不用说了，我明白……",17);
+  goto __jx_script_return
+  ::__jx_script_return::
+  return;

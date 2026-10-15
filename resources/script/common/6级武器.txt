@@ -1,0 +1,2 @@
+  addrandgoods("6级武器.ini");
+  delcurobj();

@@ -1,0 +1,5 @@
+  addgoods("goods-m09-冰蚕.ini");
+  delcurobj();
+  goto __jx_script_return
+  ::__jx_script_return::
+  return;

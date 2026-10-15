@@ -1,0 +1,211 @@
+  --+++++++++++++++++++++++++++++++++
+  -------隐藏人物 隐士鱼处理脚本-----
+  --+++++++++++++++++++++++++++++++++
+
+  --变量表：
+  --	Lany		-->	第几次和隐士鱼见面
+  --	TouchedWooy	-->	这次来看隐士鱼和他的第几次对话
+  --	RecentlyMeetWooy-->	最近见隐士鱼的次数，0 表示好久都没有见隐士鱼了
+  --	FollowWaitSide	-->	有谁在水流那侧等杨 0:没有同伴 1:纳兰真 2:月眉儿 3:紫轩 4:蔷薇 5:非女主角 >5 多于一个同伴
+
+  add("TouchedWooy",1);
+  if getvar("TouchedWooy") > 1 then goto TouchAgain end
+  --又一次相会
+  add("Lany",1);
+  add("RecentlyMeetWooy",1);
+  if getvar("Lany") == 1 then goto FirstMeet end
+  if getvar("Lany") == 2 then goto SecondMeet end
+  if getvar("Lany") == 5 then goto FifthMeet end
+  if getvar("Lany") == 7 then goto SeventhMeet end
+  if getvar("Lany") == 9 then goto NinethMeet end
+  if getvar("Lany") == 10 then goto TenthMeet end
+  if getvar("Lany") == 11 then goto EleventhMeet end
+  goto OtherMeet
+
+  ::FirstMeet:: --鱼杨两人头次见面
+  say("杨影枫：这位仁兄好雅兴。",2);
+  say("蓝衣小生：彼此彼此，兄台不也闲逛至此么。");
+  say("杨影枫：此处辟池引水，为鸟植林，为鱼凿潭。真是个好地方啊！",2);
+  say("蓝衣小生：看这林中，鸟儿觅食相呼，观这潭里，水清出石鱼可数。确是一处怡人地方。小弟就居于附近，鄙姓<color=Blue>吴<color=Black>单名一个<color=Blue>越<color=Black>字，熟识的人称我隐士<color=Blue>鱼<color=Black>，常来此处逛逛，看公子面生，敢问姓氏？");
+  say("杨影枫：小弟姓<color=Blue>杨<color=Black>名<color=Blue>影枫<color=Black>，只是一匆匆过客，自幼习武，不想今日得识隐士，幸会幸会。",2);
+  say("隐士鱼：哪里哪里。古人云<color=Red>小隐于野，中隐于市，大隐于朝。<color=Black>我小隐都算不上啊。");
+  say("杨影枫：吴兄此样逍遥自在，自不在乎大小。",2);
+  say("隐士鱼：哈哈，杨兄真能言语。");
+  goto __jx_script_return
+  ::SecondMeet:: --鱼杨第二次见面
+  say("隐士鱼：东南方有一镇子，叫<color=Red>惠安镇<color=Black>，你可曾到过？");
+  say("杨影枫：到过，吴兄何事有此一问？",2);
+  say("隐士鱼：以前我曾到过那里，见那镇子甚是繁华，现随便问问而已。");
+  say("杨影枫：是啊。小弟在那里还遇过些麻烦。",2);
+  say("隐士鱼：哦。");
+  say("杨影枫：先是碰上了窃贼，被顺走了银钱。后又遇上歹人，害了一位新认识的兄台。",2);
+  say("隐士鱼：杨兄可曾伤着？");
+  say("杨影枫：自己倒不曾伤着，只是被人误为那位兄台是我害的。幸得一友人相助，才了事。",2);
+  say("隐士鱼：没有伤着就好，像我这般在郊野，就不会遇见这类事了。");
+  if getvar("Event") == 232 then goto Doubted end
+  if getvar("Event") > 240 then goto Known end
+  say("杨影枫：城镇郊野各有其好处啊。",2);
+  goto __jx_script_return
+
+  ::Doubted:: --已经怀疑卓
+  say("杨影枫：只是……",2);
+  say("隐士鱼：只是如何？");
+  say("杨影枫：听人言，那助我的友人却有些蹊跷。",2);
+  say("隐士鱼：你可莫误会了好人。");
+  if getvar("Event24Select") == 0 then goto ChooseAgain end
+  goto __jx_script_return
+  ::ChooseAgain:: --听了鱼的话后重新选择
+  choose("杨影枫想：","说话直言，还是得直问卓大哥。","看来我还是暗访卓大哥吧。","Event24Select");
+  if getvar("Event24Select") == 1 then goto Choose1 end
+  goto __jx_script_return
+  ::Choose1:: --改为暗访卓
+  add("EvilVal",-20);
+  goto __jx_script_return
+  ::Known:: --已知真相
+  say("杨影枫：谁想最后方知那助我的友人却是幕后歹人。唉，世事为何如此？",2);
+  say("隐士鱼：江湖纷争，大大小小，正正邪邪，何苦呢！");
+  say("杨影枫：江湖中也可实现些人生壮举，留名后世。",2);
+  say("隐士鱼：你我想法相异，现在我想也劝你不动");
+  say("杨影枫：人各有志，我<color=Red>杨影枫<color=Black>还是乐于结交你这么个朋友。",2);
+  goto __jx_script_return
+  ::FifthMeet:: --鱼杨第五次见面
+  say("杨影枫：我多次见你，总是独自一人，怎么也不见你有个佳人相伴？",2);
+  say("隐士鱼：佳人难觅啊！");
+  goto __jx_script_return
+  ::SeventhMeet:: --鱼杨第七次见面
+  say("杨影枫：吴兄近来可好？",2);
+  say("隐士鱼：甚好。");
+  goto __jx_script_return
+  ::NinethMeet::
+  say("杨影枫：吴兄，别来无恙？",2);
+  say("隐士鱼：托福托福。杨兄一向可好？");
+  say("杨影枫：你真是常来此处！遇见你好多次啦！",2);
+  say("隐士鱼：是啊，此为我们第九次相遇了。");
+  say("杨影枫：九次！……吴兄真是好记性啊！",2);
+  goto __jx_script_return
+  ::TenthMeet:: --鱼杨第十次见面
+  say("杨影枫：我们又见面啦。",2);
+  say("隐士鱼：我前几日得一<color=Red>紫霞玉佩<color=Black>，人言有调节经脉之效。你是习武之人，想来予你甚有好处，下次见面我带了送你。");
+  getgoodsnum("goods-n13-紫霞玉佩.ini");
+  if getvar("GoodsNum") > 0 then goto AlreadyHave0 end
+  goto __jx_script_return
+  ::AlreadyHave0::
+  say("杨影枫：<color=Red>紫霞玉佩<color=Black>！我已有一块，恰好随身带着，你看看。",2);
+  say("隐士鱼：和我的那块真是一摸一样！");
+  say("杨影枫：吴兄的好意心领了，看来你也不用专门带玉佩来给我。",2);
+  --跳过下次给玉佩的会面
+  add("Lany",2);
+  goto __jx_script_return
+  ::EleventhMeet:: --鱼杨第十一次见面
+  say("隐士鱼：来来来，看我上次跟你提到的玉佩。");
+  say("杨影枫：此玉佩真是不错。",2);
+  getgoodsnum("goods-n13-紫霞玉佩.ini");
+  if getvar("GoodsNum") > 0 then goto AlreadyHave1 end
+  say("隐士鱼：就这玉佩送给你了。");
+  say("杨影枫：这怎么好意思呢。",2);
+  say("隐士鱼：你我也很熟了，就不用客气了。");
+  say("杨影枫：如此多谢吴兄。",2);
+  addgoods("goods-n13-紫霞玉佩.ini");
+  goto __jx_script_return
+  ::AlreadyHave1::
+  say("杨影枫：我已有此样的玉佩了，你的好意我心领了。",2);
+  say("隐士鱼：哦。");
+  say("杨影枫：你看我这块玉佩和你的可是一摸一样？",2);
+  say("隐士鱼：确实一样，如此相象的两玉佩。");
+  add("Lany",1);
+  goto __jx_script_return
+  ::OtherMeet:: --鱼杨的某次见面
+  if getvar("Event") == 170 then goto MeetAtEvent170 end
+  if getvar("Event") == 185 then goto MeetAtEvent185 end
+  if getvar("RecentlyMeetWooy") > 1 then goto Continue2 end
+  say("隐士鱼：杨兄，好久不见啦。");
+  say("杨影枫：是啊。",2);
+  goto __jx_script_return
+  ::Continue2::
+  say("隐士鱼：杨兄又来啦。");
+  say("杨影枫：来这可是总能遇见你啊。",2);
+  goto __jx_script_return
+  ::MeetAtEvent170:: --带紫轩回寒波谷
+  say("隐士鱼：诶，杨兄，此次看你带个女伴来了，就在水流那侧。");
+  say("杨影枫：那是我新近结识的姑娘，她遇上了些麻烦，我带她到这来避避。",2);
+  say("隐士鱼：原来如此。");
+  goto __jx_script_return
+  ::MeetAtEvent185:: --要去惠安镇查张仲天的事
+  say("杨影枫：吴兄，早啊。",2);
+  say("隐士鱼：看你似乎要出门的样子。");
+  say("杨影枫：我正准备去<color=Red>慧安镇<color=Black>。",2);
+  say("隐士鱼：看你象是有事要去那办。");
+  say("杨影枫：以前我和你提过，在慧安镇，我新认识的兄台遇上歹人被害之事。我想再去打听下消息，希望能查清此事情。",2);
+  say("隐士鱼：那你小心了，希望你能早日查明。");
+  goto __jx_script_return
+  ::TouchAgain:: --此次相会的再次对话
+
+  --过滤有特定对话的见面
+  if getvar("Lany") < 2 then goto ContinueTouch end
+  if getvar("Lany") == 7 then goto ContinueTouch end
+  if getvar("Lany") == 10 then goto TenthMeetAgain end
+  if getvar("Lany") == 11 then goto EleventhMeetAgain end
+
+  if getvar("Event") == 170 then goto TouchAtEvent170 end
+  if getvar("Event") == 185 then goto TouchAtEvent185 end
+  goto ContinueTouch
+  ::TouchAtEvent170::
+  say("隐士鱼：你快过去吧，别让那位姑娘久等了。");
+  goto __jx_script_return
+  ::TouchAtEvent185::
+  say("隐士鱼：去<color=Red>惠安镇<color=Black>可有好一段路要走，你快动身吧。");
+  goto __jx_script_return
+  ::ContinueTouch::
+  if getvar("FollowWaitSide") == 0 then goto Continue0 end
+  if getvar("TouchedWooy") == 2 then goto SayBye end
+  goto HaventGo
+  ::Continue0::
+  getrandnum("Temp",0,1);
+  if getvar("Temp") == 0 then goto TalkToWooy0 end
+  say("隐士鱼：如此美景，你赋诗一首如何？");
+  say("杨影枫：我胸无点墨，就算了吧。",2);
+  goto __jx_script_return
+  ::TalkToWooy0::
+  say("隐士鱼：你闲时都作何消遣？");
+  say("杨影枫：我甚少消遣，时间多用来练习武功。",2);
+  goto __jx_script_return
+  ::TenthMeetAgain::
+  say("隐士鱼：下次我定记得带玉佩来给你。");
+  say("杨影枫：吴兄好意我已经很感激了。",2);
+  goto __jx_script_return
+  ::EleventhMeetAgain::
+  say("杨影枫：多谢吴兄！",2);
+  say("隐士鱼：客气客气。");
+  goto __jx_script_return
+  ::SayBye::
+  say("杨影枫：还有朋友等我，下次有缘见面再叙，就此别过。",2);
+  say("隐士鱼：杨兄走好。");
+  goto __jx_script_return
+  ::HaventGo:: --杨说要走，怎么还赖着不走
+  if getvar("TouchedWooy") == 2 then goto FirstBack end
+  if getvar("TouchedWooy") == 3 then goto ThirdBack end
+  if getvar("TouchedWooy") == 4 then goto FourthBack end
+  if getvar("TouchedWooy") < 7 then goto HaventYet end
+  say("隐士鱼：你无不无聊，还不走。");
+  goto __jx_script_return
+  ::FirstBack:: --杨第一次回头
+  say("隐士鱼：杨兄何故不走了？");
+  say("杨影枫：得遇吴兄，真是想多聊一会儿啊。",2);
+  say("隐士鱼：既有人等你，你还是快去吧。");
+  goto __jx_script_return
+  ::ThirdBack:: --杨第再次回头
+  say("隐士鱼：杨兄何故还未走？");
+  say("杨影枫：吴兄，我闲时再来寻你。",2);
+  say("隐士鱼：好的，后会有期。");
+  goto __jx_script_return
+  ::FourthBack:: --杨第四次回头
+  say("隐士鱼：杨兄该不会不知如何回去了吧？前方跃过水流，对面是一小径。");
+  say("杨影枫：哪里哪里，我正是循此路儿来。我这就走了，后会有期。",2);
+  say("隐士鱼：后会有期。");
+  goto __jx_script_return
+  ::HaventYet:: --快走快走，不走都要赶你走了。
+  say("影士鱼：杨兄如何还未走？");
+  say("杨影枫：这就走。",2);
+  goto __jx_script_return
+  ::__jx_script_return::
+  return;

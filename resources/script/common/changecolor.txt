@@ -1,0 +1,94 @@
+  hidetimerwnd();
+  if getvar("Color") == 1 then goto Color1 end
+  if getvar("Color") == 2 then goto Color2 end
+  if getvar("Color") == 3 then goto Color3 end
+  if getvar("Color") == 4 then goto Color4 end
+  if getvar("Color") == 5 then goto Color5 end
+  if getvar("Color") == 6 then goto Color6 end
+  if getvar("Color") == 7 then goto Color7 end
+  if getvar("Color") == 8 then goto Color8 end
+  if getvar("Color") == 9 then goto Color9 end
+  if getvar("Color") == 10 then goto Color10 end
+  if getvar("Color") == 11 then goto Color11 end
+
+
+  goto L_end
+
+
+  ::Color1::
+  changemapcolor(250,250,250);
+  changeasfcolor(255,255,255);
+  goto L_end
+
+  ::Color2::
+  changemapcolor(225,225,225);
+  changeasfcolor(255,255,255);
+  goto L_end
+
+  ::Color3::
+  changemapcolor(200,200,200);
+  changeasfcolor(255,255,255);
+  goto L_end
+
+  ::Color4::
+  changemapcolor(175,175,175);
+  changeasfcolor(255,255,255);
+  goto L_end
+
+  ::Color5::
+  changemapcolor(150,150,150);
+  changeasfcolor(255,255,255);
+  goto L_end
+
+  ::Color6::
+  changemapcolor(125,125,125);
+  changeasfcolor(255,255,255);
+  goto L_end
+
+  ::Color7::
+  changemapcolor(100,100,100);
+  changeasfcolor(255,255,255);
+  goto L_end
+
+
+  ::Color8::
+  changemapcolor(75,75,75);
+  changeasfcolor(255,255,255);
+  goto L_end
+
+
+  ::Color9::
+  changemapcolor(50,50,50);
+  changeasfcolor(255,255,255);
+  goto L_end
+
+
+  ::Color10::
+  changemapcolor(25,25,25);
+  changeasfcolor(255,255,255);
+  goto L_end
+
+
+  ::Color11::
+  changemapcolor(0,0,0);
+  changeasfcolor(255,255,255);
+  goto L_end
+
+
+
+
+  ::L_end::
+  closetimelimit();
+  opentimelimit(2);
+  hidetimerwnd();
+  settimescript(1,"changecolor.txt");
+  add("Color",1);
+  if getvar("Color") >= 12 then goto Again end
+  goto __jx_script_return
+
+  ::Again::
+  assign("Color",1);
+  goto __jx_script_return
+
+  ::__jx_script_return::
+  return;

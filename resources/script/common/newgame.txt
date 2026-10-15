@@ -1,0 +1,9 @@
+  -- 新游戏脚本
+
+  stopmusic();
+  loadgame(0);
+  playmovie("open.wmv");
+  runscript("begin.txt");
+  goto __jx_script_return
+  ::__jx_script_return::
+  return;

@@ -1,0 +1,7 @@
+  --片头脚本
+  playmovie("logo.avi");
+  playmusic("mc000.mp3");
+  returntotitle();
+  goto __jx_script_return
+  ::__jx_script_return::
+  return;

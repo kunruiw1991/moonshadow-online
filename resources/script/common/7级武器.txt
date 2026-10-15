@@ -1,0 +1,2 @@
+  addrandgoods("7级武器.ini");
+  delcurobj();

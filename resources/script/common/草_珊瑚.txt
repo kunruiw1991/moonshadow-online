@@ -1,0 +1,5 @@
+  addgoods("goods-m10-珊瑚.ini");
+  delcurobj();
+  goto __jx_script_return
+  ::__jx_script_return::
+  return;

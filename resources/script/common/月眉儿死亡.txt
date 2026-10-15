@@ -1,0 +1,12 @@
+  stopmusic();
+  playsound("游戏结束.wav");
+  sleep(2000);
+  say("月眉儿：杨大哥，我们……来世再见……",24);
+  fadeout();
+  playmovie("die.wmv");
+  freemap();
+  playmusic("mc000.mp3");
+  returntotitle();
+  goto __jx_script_return
+  ::__jx_script_return::
+  return;

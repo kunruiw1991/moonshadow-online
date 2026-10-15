@@ -1,0 +1,15 @@
+  if getvar("Event") == 402 then goto L_402 end
+  if getvar("Event") == 1819 then goto L_1819 end
+  goto __jx_script_return
+
+  ::L_1819::
+  say("杨影枫：眉儿，你还恨我吗？",3);
+  say("月眉儿：当然恨，我恨死你了。",23);
+  goto __jx_script_return
+
+  ::L_402::
+  say("月眉儿：你走你走！你马上从我眼前消失！",23);
+  say("杨影枫：……",3);
+  goto __jx_script_return
+  ::__jx_script_return::
+  return;

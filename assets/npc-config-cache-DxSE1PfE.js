@@ -1,0 +1,1 @@
+import"./game-api-Dcz2zXvL.js";import"./LibsReact-DqaepkjQ.js";import{r as e,t}from"./npc-config-cache-Br_zJsNv.js";import"./cache-registry-DynuSLTb.js";export{t as getNpcConfigFromCache,e as isNpcConfigLoaded};

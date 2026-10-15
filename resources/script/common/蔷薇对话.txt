@@ -1,0 +1,11 @@
+  if getvar("Event") == 1819 then goto L_1819 end
+  goto __jx_script_return
+
+  ::L_1819::
+  say("蔷薇：杨大哥，你说我长得好看吗？",29);
+  say("杨影枫：真……好看……",2);
+  say("蔷薇：哼！你是不是想说真儿姐更好看呀？",31);
+  say("杨影枫：没有……都好看……",3);
+  goto __jx_script_return
+  ::__jx_script_return::
+  return;

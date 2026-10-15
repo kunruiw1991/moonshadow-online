@@ -1,0 +1,9 @@
+  -- 制作组介绍
+
+  stopmusic();
+  playmovie("team.wmv",0,0,0);
+  playmusic("mc000.mp3");
+  returntotitle();
+  goto __jx_script_return
+  ::__jx_script_return::
+  return;

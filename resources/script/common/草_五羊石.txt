@@ -1,0 +1,5 @@
+  addgoods("goods-m17-五羊石.ini");
+  delcurobj();
+  goto __jx_script_return
+  ::__jx_script_return::
+  return;

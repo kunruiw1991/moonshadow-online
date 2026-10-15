@@ -1,0 +1,16 @@
+  if getvar("Event") == 3060 then goto Talk3060 end
+  if getvar("Event") == 3100 then goto Talk3100 end
+  goto __jx_script_return
+
+
+  ::Talk3060::
+  say("月眉儿：嗯？",22);
+  say("杨影枫：……没什么，我们走吧。",2);
+  goto __jx_script_return
+
+  ::Talk3100::
+  say("月眉儿：嗯？",22);
+  say("杨影枫：这里离悲魔山庄不远了，再走一会就到了。",2);
+  goto __jx_script_return
+  ::__jx_script_return::
+  return;

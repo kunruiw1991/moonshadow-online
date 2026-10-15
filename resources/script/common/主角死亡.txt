@@ -1,0 +1,11 @@
+  stopmusic();
+  sleep(2000);
+  fadeout();
+  playmovie("die.wmv");
+  freemap();
+  playmusic("mc000.mp3");
+  returntotitle();
+  goto __jx_script_return
+
+  ::__jx_script_return::
+  return;

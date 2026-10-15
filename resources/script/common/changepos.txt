@@ -1,0 +1,50 @@
+
+  if getvar("Pos") == 1 then goto Pos1 end
+  if getvar("Pos") == 2 then goto Pos2 end
+  if getvar("Pos") == 3 then goto Pos3 end
+  if getvar("Pos") == 4 then goto Pos4 end
+  if getvar("Pos") == 5 then goto Pos5 end
+  if getvar("Pos") == 6 then goto Pos6 end
+  goto L_end
+
+
+  ::Pos1::
+  setnpcpos("紫轩",5,5);
+  goto L_end
+
+  ::Pos2::
+  setnpcpos("紫轩",9,37);
+  goto L_end
+
+  ::Pos3::
+  setnpcpos("紫轩",1,23);
+  goto L_end
+
+  ::Pos4::
+  setnpcpos("紫轩",16,27);
+  goto L_end
+
+  ::Pos5::
+  setnpcpos("紫轩",3,41);
+  goto L_end
+
+  ::Pos6::
+  setnpcpos("紫轩",11,21);
+  goto L_end
+
+
+
+  ::L_end::
+  closetimelimit();
+  opentimelimit(10);
+  settimescript(1,"changepos.txt");
+  add("Pos",1);
+  if getvar("Pos") >= 7 then goto Again end
+  goto __jx_script_return
+
+  ::Again::
+  assign("Pos",1);
+  goto __jx_script_return
+
+  ::__jx_script_return::
+  return;

@@ -1,0 +1,2 @@
+  addrandgoods("低级药品.ini");
+  delcurobj();

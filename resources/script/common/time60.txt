@@ -1,0 +1,2 @@
+  talk(20,20);
+  settimescript(0,"timeover.txt");

@@ -1,0 +1,5 @@
+  addgoods("goods-m01-银花.ini");
+  delcurobj();
+  goto __jx_script_return
+  ::__jx_script_return::
+  return;

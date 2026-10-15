@@ -1,0 +1,5 @@
+  addgoods("goods-m15-屈失草.ini");
+  delcurobj();
+  goto __jx_script_return
+  ::__jx_script_return::
+  return;

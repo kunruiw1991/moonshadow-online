@@ -1,0 +1,2 @@
+  addrandgoods("特级药品.ini");
+  delcurobj();

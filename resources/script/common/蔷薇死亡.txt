@@ -1,0 +1,9 @@
+  stopmusic();
+  playsound("游戏结束.wav");
+  sleep(3000);
+  fadeout();
+  playmovie("death.mp4");
+  returntotitle();
+  goto __jx_script_return
+  ::__jx_script_return::
+  return;

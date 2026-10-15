@@ -1,0 +1,10 @@
+  stopmusic();
+  sleep(2000);
+  playsound("游戏结束.wav");
+  say("纳兰真：杨大哥，我们……来世再见……",9);
+  fadeout();
+  playmovie("death.mp4");
+  returntotitle();
+  goto __jx_script_return
+  ::__jx_script_return::
+  return;

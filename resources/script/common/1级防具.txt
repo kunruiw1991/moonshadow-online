@@ -1,0 +1,2 @@
+  addrandgoods("1级防具.ini");
+  delcurobj();

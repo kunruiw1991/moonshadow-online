@@ -1,0 +1,5 @@
+  addgoods("goods-m16-龙须草.ini");
+  delcurobj();
+  goto __jx_script_return
+  ::__jx_script_return::
+  return;

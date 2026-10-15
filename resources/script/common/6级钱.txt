@@ -1,0 +1,3 @@
+  playsound("物-银子.wav");
+  addrandmoney(210,240);
+  delcurobj();

@@ -1,0 +1,5 @@
+  addgoods("goods-m11-荀草.ini");
+  delcurobj();
+  goto __jx_script_return
+  ::__jx_script_return::
+  return;

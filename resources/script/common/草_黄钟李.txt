@@ -1,0 +1,5 @@
+  addgoods("goods-m03-黄钟李.ini");
+  delcurobj();
+  goto __jx_script_return
+  ::__jx_script_return::
+  return;

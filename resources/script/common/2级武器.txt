@@ -1,0 +1,2 @@
+  addrandgoods("2级武器.ini");
+  delcurobj();

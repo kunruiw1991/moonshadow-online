@@ -1,0 +1,9 @@
+  if getvar("Event") == 1819 then goto L_1819 end
+  goto __jx_script_return
+
+  ::L_1819::
+  say("杨影枫：真儿，你真好看……",3);
+  say("纳兰真：你又拿人家开玩笑了……影枫哥。",10);
+  goto __jx_script_return
+  ::__jx_script_return::
+  return;

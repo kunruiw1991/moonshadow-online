@@ -1,0 +1,22 @@
+  if getvar("Event") == 3020 then goto Talk3020 end
+  if getvar("Event") == 425 then goto Event425 end
+
+  ::Event425::
+  if getvar("NaLanZhenSense") >= 20 then goto AddSenseEnd end
+  add("SenseVal",5);
+  add("NaLanZhenSense",5);
+  ::AddSenseEnd::
+  say("杨影枫：真儿，你累了吗？",2);
+  say("纳兰真：不累，我们还是先去禁地吧，爹在那里等着我们。",9);
+  goto L_end
+
+  ::Talk3020::
+  say("杨影枫：你还记得我们在一起的日子吗？在忘忧岛，那是我最快乐的时光，你是我最喜欢的人。",2);
+  say("纳兰真：记得呀……",10);
+  goto __jx_script_return
+
+
+  ::L_end::
+  goto __jx_script_return
+  ::__jx_script_return::
+  return;

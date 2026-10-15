@@ -1,0 +1,2 @@
+  addrandgoods("4级防具.ini");
+  delcurobj();

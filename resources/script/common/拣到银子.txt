@@ -1,0 +1,7 @@
+  openbox();
+  playsound("物-银子.wav");
+  addrandmoney(10,100);
+  setobjscript("","关宝箱.txt");
+  goto __jx_script_return
+  ::__jx_script_return::
+  return;

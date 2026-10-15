@@ -1,0 +1,7 @@
+  playsound("物-箱子开.wav");
+  openbox();
+  showmessage(94400);
+  setobjscript("","");
+  goto __jx_script_return
+  ::__jx_script_return::
+  return;

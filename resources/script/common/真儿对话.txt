@@ -1,0 +1,16 @@
+  if getvar("Event") == 1816 then goto L_1816 end
+  if getvar("Event") == 1819 then goto L_1819 end
+  goto __jx_script_return
+
+  ::L_1819::
+  say("杨影枫：真儿，你真好看……",3);
+  say("纳兰真：你又拿人家开玩笑了……影枫哥。",10);
+  goto __jx_script_return
+
+  ::L_1816::
+  say("杨影枫：真儿，想不到你和月眉儿原来是亲姐妹。",2);
+  say("纳兰真：我也没想到，不过我第一次见到眉儿姐时就感觉特别亲切。",9);
+  goto __jx_script_return
+
+  ::__jx_script_return::
+  return;

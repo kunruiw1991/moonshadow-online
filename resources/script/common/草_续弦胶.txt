@@ -1,0 +1,5 @@
+  addgoods("goods-m04-续弦胶.ini");
+  delcurobj();
+  goto __jx_script_return
+  ::__jx_script_return::
+  return;

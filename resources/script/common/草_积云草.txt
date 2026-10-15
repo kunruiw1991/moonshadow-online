@@ -1,0 +1,5 @@
+  addgoods("goods-m08-积云草.ini");
+  delcurobj();
+  goto __jx_script_return
+  ::__jx_script_return::
+  return;
